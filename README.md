@@ -4,7 +4,7 @@ A full-stack sports event management application built with Next.js 15, Supabase
 
 ## 🚀 Live Demo
 
-[View Live Application](https://your-vercel-url.vercel.app)
+**[View Live Application](https://sports-events-iota.vercel.app)**
 
 ## ✨ Features
 
@@ -77,17 +77,39 @@ Row Level Security (RLS) ensures users can only access their own events.
 
 ### Prerequisites
 
-- Node.js 18+
-- npm or yarn
+- **Node.js**: 18.17.0 or higher (check with `node -v`)
+- **npm**: 9.0.0 or higher (check with `npm -v`)
 - Supabase account
 
-### 1. Clone the repository
+#### Recommended: Use nvm for Node version management
+
+```bash
+# Install nvm if you haven't
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+
+# Install and use the correct Node version
+nvm install 18.17.0
+nvm use 18.17.0
+
+# Or if .nvmrc is present, simply:
+nvm use
+```
+
+### 1. Clone and Setup
 
 ```bash
 git clone <your-repo-url>
 cd sports-events
-npm install
+
+# Option A: Use the setup script (recommended)
+chmod +x setup.sh
+./setup.sh
+
+# Option B: Manual setup
+npm ci  # Use 'npm ci' instead of 'npm install' for reproducible builds
 ```
+
+**Important**: Always use `npm ci` instead of `npm install` to ensure you get the exact versions from package-lock.json.
 
 ### 2. Set up Supabase
 
