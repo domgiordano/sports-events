@@ -53,6 +53,7 @@ src/
 The application uses two main tables:
 
 ### Events Table
+
 - `id` (UUID, PK)
 - `name` (VARCHAR)
 - `sport_type` (VARCHAR)
@@ -62,6 +63,7 @@ The application uses two main tables:
 - `created_at`, `updated_at` (TIMESTAMPTZ)
 
 ### Venues Table
+
 - `id` (UUID, PK)
 - `event_id` (UUID, FK to events)
 - `name` (VARCHAR)
@@ -102,6 +104,7 @@ cp .env.local.example .env.local
 ```
 
 Edit `.env.local` with your Supabase credentials:
+
 ```
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
@@ -131,6 +134,7 @@ Open [http://localhost:3000](http://localhost:3000)
 ### Post-deployment
 
 Update your Supabase project:
+
 1. Go to Authentication > URL Configuration
 2. Add your Vercel URL to "Site URL"
 3. Add `https://your-app.vercel.app/auth/callback` to "Redirect URLs"
@@ -146,6 +150,7 @@ type ActionResult<T> =
 ```
 
 This provides:
+
 - Type-safe responses
 - Consistent error handling
 - No direct client-side database access
@@ -158,8 +163,3 @@ npm run build    # Build for production
 npm run start    # Start production server
 npm run lint     # Run ESLint
 ```
-
-## 📄 License
-
-MIT
-
